@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+   name: eskafvol02
+spec:
+   capacity:
+     storage: 4Gi
+   accessModes:
+     - ReadWriteOnce
+   persistentVolumeReclaimPolicy: Retain
+   nfs:
+     path: /export/files/eskafvol02
+     server: 10.186.197.11
+
